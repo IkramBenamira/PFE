@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import style
+x1 = [1,2,3,4,5,6,7,8,9,10,11,12]
+x2 = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 5]
+bins = [x + 0.5 for x in range(0, 6)]
+plt.hist([x1, x2], bins = bins, color = ['yellow', 'blue'],
+            edgecolor = 'red', hatch = '/', label = ['x1', 'x2'],
+            histtype = 'bar') # bar est le defaut
+plt.ylabel('temperature')
+plt.xlabel('month')
+plt.title('2 Algeria average monthly raunfall 2021')
+plt.show()

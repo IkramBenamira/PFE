@@ -1,0 +1,19 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+from matplotlib.pylab import rcParams
+rcParams['figure.figsize']=10,6
+plt.figure(figsize=(8,4))
+x=[2000,2002,2004,2008,2010,2012,2014,2016,2018,2020,2022]
+y=[20,12,14,24,10,2,8,12,13,9,11]
+x2=[2000,2002,2004,2008,2010,2012,2014,2016,2018,2020,2022]
+y2=[25,10,11,15,16,10,6,10,9,10,22]
+plt.axis([2000,2022,1,50])
+plt.plot(x,y,'r',label='rain',linestyle='--',linewidth=2)
+plt.plot(x2,y2,'g',label='snow',linewidth=2)
+plt.xlabel('years')   
+plt.ylabel('Amount')
+plt.title('Whether')
+plt.legend()
+plt.show()
